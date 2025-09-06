@@ -11,4 +11,37 @@ button:hover{background:#666}
 #form{display:flex;padding:12px;border-top:1px solid #333}
 #form input{flex:1;padding:10px;border-radius:8px;border:none}
 #form button{margin-left:8px;background:#ffcc00;color:#000}
-.hidden{display:none}
+.hidden{display:none} 
+/* Header pour le bouton en haut */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2c2f33;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+header button {
+  padding: 8px 15px;
+  background-color: #7289da;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+header button:hover {
+  background-color: #5b6eae;
+}
+
+/* Décaler l'app pour ne pas cacher le header */
+.app {
+  margin-top: 60px; /* même hauteur que le header */
+}
