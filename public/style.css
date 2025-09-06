@@ -1,67 +1,62 @@
 body {
-  margin: 0;
-  font-family: Verdana;
-  background: #1e1f26;
-  color: #eee;
-  overflow: hidden; /* bloque scroll global */
+  margin:0;
+  font-family:Verdana;
+  background:#1e1f26;
+  color:#eee;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden; /* bloque le scroll global */
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #2c2f33;
-  padding: 10px;
-  display: flex;
-  justify-content: flex-end;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  z-index: 1000;
+.auth-container {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  background:#2c2f38;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+  text-align:center;
 }
 
-header button {
-  padding: 8px 15px;
-  background-color: #7289da;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
+.auth-container input {
+  padding:8px;
+  border-radius:5px;
+  border:none;
 }
 
-header button:hover {
-  background-color: #5b6eae;
+.auth-container button {
+  padding:8px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  background:#7289da;
+  color:white;
+  font-weight:bold;
 }
 
+.auth-container button:hover {
+  background:#5b6eae;
+}
+
+.hidden { display:none; }
+
+/* Chat layout */
 .app {
-  display: flex;
-  height: calc(100vh - 60px);
-  margin-top: 60px; /* pour le header */
+  display:flex;
+  height:100vh;
+  width:100vw;
 }
 
 .sidebar {
-  width: 260px;
-  background: #2c2f38;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
+  width:260px;
+  background:#2c2f38;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
 }
-
-.sidebar h2 { color: #ffcc00 }
-
-button {
-  cursor:pointer;
-  background:#444;
-  color:#eee;
-  border:none;
-  border-radius:8px;
-  padding:8px;
-  margin:4px 0;
-  transition:0.2s;
-}
-
-button:hover { background:#666 }
 
 .main {
   flex:1;
@@ -73,17 +68,8 @@ button:hover { background:#666 }
 #messagesArea {
   flex:1;
   padding:16px;
-  overflow:auto; /* seul le chat scrollable */
+  overflow:auto;
 }
-
-.msg {
-  padding:10px;
-  border-radius:8px;
-  margin-bottom:10px;
-  background:#2a2d38;
-}
-
-.msg:hover { background:#3a3d48 }
 
 #form {
   display:flex;
@@ -103,11 +89,3 @@ button:hover { background:#666 }
   background:#ffcc00;
   color:#000;
 }
-
-.auth {
-  display:flex;
-  flex-direction:column;
-  padding:16px;
-}
-
-.hidden { display:none; }
