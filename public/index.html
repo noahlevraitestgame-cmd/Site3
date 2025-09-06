@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chat complet</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>🔥 Chat Game</h2>
+      <div class="auth">
+        <input id="username" placeholder="Pseudo" />
+        <input id="password" type="password" placeholder="Mot de passe" />
+        <button id="btnRegister">S'enregistrer</button>
+        <button id="btnLogin">Connexion</button>
+        <div id="me"></div>
+      </div>
+      <div class="rooms">
+        <h3>Salons</h3>
+        <button class="room" data-room="global"># global</button>
+        <button class="room" data-room="dev"># dev</button>
+        <button class="room" data-room="random"># random</button>
+      </div>
+      <div class="pm">
+        <h3>Message privé</h3>
+        <input id="pmTo" placeholder="À (pseudo)" />
+      </div>
+      <div id="adminPanel" class="admin hidden">
+        <h3>⚙️ Admin Panel</h3>
+        <button id="btnShowUsers">Voir utilisateurs</button>
+        <div id="usersList"></div>
+      </div>
+    </aside>
+    <main class="main">
+      <div id="messagesArea"></div>
+      <form id="form">
+        <input id="msgInput" placeholder="Écris un message..." />
+        <button>Envoyer</button>
+      </form>
+    </main>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>

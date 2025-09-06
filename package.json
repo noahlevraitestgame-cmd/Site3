@@ -1,0 +1,16 @@
+{
+  "name": "chat-nodejs-admin",
+  "version": "1.3.0",
+  "description": "Chat temps réel avec admin panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.0"
+  }
+}

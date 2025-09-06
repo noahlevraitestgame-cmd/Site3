@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Noah_owner",
+      "password": "$2b$12$dnAEPJHk74jy9S/usTd9b.Xnq9uo7BeO9lWf7/sxfQV7E0IwKWZv6",
+      "role": "admin"
+    }
+  ]
+}
