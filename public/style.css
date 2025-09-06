@@ -1,18 +1,11 @@
-body{margin:0;font-family:Verdana;background:#1e1f26;color:#eee}
-.app{display:flex;height:100vh}
-.sidebar{width:260px;background:#2c2f38;padding:16px;display:flex;flex-direction:column}
-.sidebar h2{color:#ffcc00}
-button{cursor:pointer;background:#444;color:#eee;border:none;border-radius:8px;padding:8px;margin:4px 0;transition:0.2s}
-button:hover{background:#666}
-.main{flex:1;display:flex;flex-direction:column;background:#18191f}
-#messagesArea{flex:1;padding:16px;overflow:auto}
-.msg{padding:10px;border-radius:8px;margin-bottom:10px;background:#2a2d38}
-.msg:hover{background:#3a3d48}
-#form{display:flex;padding:12px;border-top:1px solid #333}
-#form input{flex:1;padding:10px;border-radius:8px;border:none}
-#form button{margin-left:8px;background:#ffcc00;color:#000}
-.hidden{display:none} 
-/* Header pour le bouton en haut */
+body {
+  margin: 0;
+  font-family: Verdana;
+  background: #1e1f26;
+  color: #eee;
+  overflow: hidden; /* bloque scroll global */
+}
+
 header {
   position: fixed;
   top: 0;
@@ -34,14 +27,87 @@ header button {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.2s;
+  transition: 0.2s;
 }
 
 header button:hover {
   background-color: #5b6eae;
 }
 
-/* Décaler l'app pour ne pas cacher le header */
 .app {
-  margin-top: 60px; /* même hauteur que le header */
+  display: flex;
+  height: calc(100vh - 60px);
+  margin-top: 60px; /* pour le header */
 }
+
+.sidebar {
+  width: 260px;
+  background: #2c2f38;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 { color: #ffcc00 }
+
+button {
+  cursor:pointer;
+  background:#444;
+  color:#eee;
+  border:none;
+  border-radius:8px;
+  padding:8px;
+  margin:4px 0;
+  transition:0.2s;
+}
+
+button:hover { background:#666 }
+
+.main {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  background:#18191f;
+}
+
+#messagesArea {
+  flex:1;
+  padding:16px;
+  overflow:auto; /* seul le chat scrollable */
+}
+
+.msg {
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:10px;
+  background:#2a2d38;
+}
+
+.msg:hover { background:#3a3d48 }
+
+#form {
+  display:flex;
+  padding:12px;
+  border-top:1px solid #333;
+}
+
+#form input {
+  flex:1;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+}
+
+#form button {
+  margin-left:8px;
+  background:#ffcc00;
+  color:#000;
+}
+
+.auth {
+  display:flex;
+  flex-direction:column;
+  padding:16px;
+}
+
+.hidden { display:none; }
